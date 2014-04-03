@@ -87,8 +87,8 @@
                     "userConfig": {
                         "designer|displayName": "",
                         "height": 60,
-                        "label": "Location",
-                        "name": "location"
+                        "label": "Location Detect",
+                        "name": "detectLocation"
                     },
                     "designerId": "4c9224ee-2387-4559-9c83-7007aa8e57d1"
                 },
@@ -116,7 +116,7 @@
                         ],
                         "mapOptions": [
                             "{\r",
-                            "    \r",
+                            "  \r",
                             "                center : new google.maps.LatLng(28.63,77),  \r",
                             "                zoom : 12,\r",
                             "                mapTypeId : google.maps.MapTypeId.ROADMAP,\r",

@@ -70,8 +70,8 @@ Ext.define('raxa.view.patientForm', {
                     {
                         xtype: 'togglefield',
                         height: 60,
-                        label: 'Location',
-                        name: 'location'
+                        label: 'Location Detect',
+                        name: 'detectLocation'
                     },
                     {
                         xtype: 'map',

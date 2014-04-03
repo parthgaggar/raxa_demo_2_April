@@ -10,7 +10,7 @@
             "Account"
         ],
         "models": [
-            "Model",
+            "userStore",
             "Location"
         ],
         "name": "raxa",
@@ -19,7 +19,8 @@
         ],
         "stores": [
             "Locations",
-            "PlacesStore"
+            "PlacesStore",
+            "UserStore"
         ],
         "views": [
             "MainView",

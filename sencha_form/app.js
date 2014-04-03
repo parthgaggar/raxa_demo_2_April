@@ -25,12 +25,13 @@ Ext.application({
         'Ext.MessageBox'
     ],
     models: [
-        'Model',
+        'userStore',
         'Location'
     ],
     stores: [
         'Locations',
-        'PlacesStore'
+        'PlacesStore',
+        'UserStore'
     ],
     views: [
         'MainView',

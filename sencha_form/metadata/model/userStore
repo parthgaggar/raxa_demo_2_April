@@ -6,7 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Model"
+        "designer|userClassName": "userStore"
     },
     "designerId": "900330e1-36f6-43c1-be1e-36b47ae2a6d8",
     "cn": [
@@ -33,18 +33,6 @@
                 "name": "password"
             },
             "designerId": "8266ef0c-ba62-49df-b5d4-224e38ac08ab"
-        },
-        {
-            "type": "Ext.data.Field",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "name": "patientid"
-            },
-            "designerId": "c91ee8b8-50f9-4b74-9432-293069241168"
         }
     ]
 }
