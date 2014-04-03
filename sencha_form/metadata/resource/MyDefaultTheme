@@ -1,0 +1,52 @@
+{
+    "type": "defaultthemeresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyDefaultTheme"
+    },
+    "designerId": "0d501a6b-7115-4e6e-8718-dca3b880aaab",
+    "storage": {
+        "needsCompile": false,
+        "simple": {},
+        "nameIndex": 2,
+        "varData": {
+            "Ext.Button": {
+                "globalVars": [
+                    {
+                        "name": "badge-bg-color",
+                        "enabled": true,
+                        "value": "rgba(8,204,0,1)"
+                    },
+                    {
+                        "name": "badge-radius",
+                        "enabled": true,
+                        "value": "0.1em"
+                    }
+                ],
+                "uis": [
+                    {
+                        "name": "untitled-ui-1-small",
+                        "displayName": "Untitled 1 (small)",
+                        "variables": [
+                            {
+                                "name": "color",
+                                "value": "$active-color",
+                                "defValue": "$active-color"
+                            },
+                            {
+                                "name": "gradient",
+                                "value": "$button-gradient",
+                                "defValue": "$button-gradient"
+                            }
+                        ],
+                        "baseUiName": "small"
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "feedbackForm",
+        "designer|userClassName": "feedbackForm"
+    },
+    "designerId": "646bbc70-0765-4416-8a74-b41ff49d7c95",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "feedbackform"
+            },
+            "designerId": "c484cce5-8a72-419d-b524-ff036dac5a4e",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Treatment id",
+                        "name": "treatmentid"
+                    },
+                    "designerId": "ec2cddfd-54ff-4842-91d5-19528f68c027"
+                },
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "increment": 20,
+                        "label": "Rating",
+                        "name": "response"
+                    },
+                    "designerId": "6ed9500a-3fc7-4f07-829c-119bf4b594e2"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Remarks",
+                        "name": "remarks"
+                    },
+                    "designerId": "e70ec9f7-e272-43e1-a626-178c38e7440e"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "text": "Submit Feedback"
+            },
+            "designerId": "6f75738c-1eeb-49ff-a2bb-f4890547de5d"
+        }
+    ]
+}

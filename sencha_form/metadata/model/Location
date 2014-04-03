@@ -1,0 +1,79 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Location"
+    },
+    "designerId": "a9f06322-9017-4906-859e-7bd825f42db3",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id",
+                "type": "int"
+            },
+            "designerId": "cefa4c13-8d3b-451a-9baf-cc3af034b242"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name",
+                "type": "string"
+            },
+            "designerId": "58c3720b-6332-49eb-a5fe-5e35d7658611"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "description",
+                "type": "string"
+            },
+            "designerId": "2c9cb823-e8ab-4814-bec5-be61aa5272a1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "latitude",
+                "type": "float"
+            },
+            "designerId": "3456b599-14bc-44bf-a861-b361b1024828"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "longitude",
+                "type": "float"
+            },
+            "designerId": "b3c88c7a-7956-4fad-9047-68db11c4fc32"
+        }
+    ]
+}

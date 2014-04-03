@@ -1,0 +1,42 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PlacesStore",
+        "model": "Location",
+        "storeId": "PlacesStore"
+    },
+    "designerId": "ff0016c4-ffdf-45bf-8f36-451e94a66d21",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://localhost:8081/openmrs-standalone/ws/rest/v1/location?v=full"
+            },
+            "designerId": "3147e10b-6009-4c45-bf7a-b4d217b4420c",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "results"
+                    },
+                    "designerId": "da28ba9b-6d6a-41b4-9e52-12bb34a49a29"
+                }
+            ]
+        }
+    ]
+}

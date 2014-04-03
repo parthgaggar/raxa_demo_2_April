@@ -1,0 +1,763 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Account"
+    },
+    "designerId": "281224ab-8461-4b2e-9888-353e3182bb15",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview #showLoginButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "showLogin",
+                "implHandler": [
+                    "\r",
+                    "var loginForm = Ext.create('widget.loginform'),\t// Login form\r",
+                    "    mainView = this.getMainView();\t\t\t\t// Main view\r",
+                    "// Navigate to login\r",
+                    "mainView.push({\r",
+                    "    xtype: \"loginform\",\r",
+                    "    title: \"Login\"\r",
+                    "});\r",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "designerId": "382eaa3d-63ef-45db-8f5d-639c2def90f4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview #showRegisterButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "showRegister",
+                "implHandler": [
+                    "\r",
+                    "var registerForm = Ext.create('widget.registerform'),\t// Registration form\r",
+                    "    mainView = this.getMainView();\t\t\t\t\t\t// Main view\r",
+                    "\r",
+                    "// Navigate to register\r",
+                    "mainView.push({\r",
+                    "    xtype: \"registerform\",\r",
+                    "    title: \"Register\"\r",
+                    "});\r",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "designerId": "25893cb2-9fca-4cb3-b457-2e12b9102711"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "loginform #loginButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "login",
+                "implHandler": [
+                    "\r",
+                    "var form = button.up('formpanel'),\t\t\t// Login form\r",
+                    "\tvalues = form.getValues(),\t\t\t\t// Form values\r",
+                    "\tmainView = this.getMainView(),\t\t\t// Main view\r",
+                    "\tloginPanel = this.getLoginPanel(),\t\t// Login and register buttons\r",
+                    "\twelcomePanel = this.getWelcomePanel(),\t// Welcome panel\r",
+                    "    welcomepanel = Ext.create('widget.welcomePanel'),\t// Registration form\r",
+                    "    navigationView=  this.getNavigationView();;\t// Navigation View\r",
+                    "// Success\r",
+                    "var successCallback = function(resp, ops) {\r",
+                    "\r",
+                    "    // Go back\r",
+                    "    mainView.pop();\r",
+                    "\r",
+                    "    // Hide login panel\r",
+                    "    loginPanel.hide();\r",
+                    "\r",
+                    "    // Show welcome panel\r",
+                    "  // welcomePanel.show();\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "        // Navigate to welcome panel\r",
+                    "    navigationView.push({\r",
+                    "       xtype: \"welcomePanel\"\r",
+                    "        });\r",
+                    "\r",
+                    "\r",
+                    "};\r",
+                    "\r",
+                    "// Failure\r",
+                    "var failureCallback = function(resp, ops) {\r",
+                    "\r",
+                    "    // Show login failure error\r",
+                    "    Ext.Msg.alert(\"Login Failure\", resp);\r",
+                    "\r",
+                    "};\r",
+                    "\r",
+                    "\r",
+                    "// TODO: Login using server-side authentication service\r",
+                    "// Ext.Ajax.request({\r",
+                    "//\t\turl: \"/api/login\",\r",
+                    "//\t\tparams: values,\r",
+                    "//\t\tsuccess: successCallback,\r",
+                    "//\t\tfailure: failureCallback\r",
+                    "// });\r",
+                    "\r",
+                    "// running success right now\r",
+                    "successCallback();"
+                ],
+                "name": "tap"
+            },
+            "designerId": "613f385b-036d-4465-acb4-0d48731462d6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "registerform #registerButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "register",
+                "implHandler": [
+                    "\r",
+                    "var form = button.up('formpanel'),\t\t\t// Login form\r",
+                    "    values = form.getValues(),\t\t\t\t// Form values\r",
+                    "    mainView = this.getMainView(),\t\t\t// Main view\r",
+                    "    loginPanel = this.getLoginPanel(),\t\t// Login and register buttons\r",
+                    "    welcomePanel = this.getWelcomePanel(),\t// Welcome panel\r",
+                    "    navigationView= this.getNavigationView(); \t// Navigation View\r",
+                    "// Success\r",
+                    "var successCallback = function(resp, ops) {\r",
+                    "\r",
+                    "    // Go back\r",
+                    "   // mainView.pop();\r",
+                    "\r",
+                    "    // Hide login panel\r",
+                    "    loginPanel.hide();\r",
+                    "\r",
+                    "    // Show welcome panel\r",
+                    "   // welcomePanel.show();\r",
+                    "\r",
+                    "\r",
+                    "      // Navigate to welcome panel\r",
+                    "        navigationView.push({\r",
+                    "            xtype: \"welcomePanel\"\r",
+                    "        });\r",
+                    "\r",
+                    "\r",
+                    "};\r",
+                    "\r",
+                    "// Failure\r",
+                    "var failureCallback = function(resp, ops) {\r",
+                    "\r",
+                    "    // Show login failure error\r",
+                    "    Ext.Msg.alert(\"Registration Failure\", resp);\r",
+                    "\r",
+                    "};\r",
+                    "\r",
+                    "\r",
+                    "// TODO: Register using server-side authentication service\r",
+                    "// Ext.Ajax.request({\r",
+                    "//\t\turl: \"/api/register\",\r",
+                    "//\t\tparams: values,\r",
+                    "//\t\tsuccess: successCallback,\r",
+                    "//\t\tfailure: failureCallback\r",
+                    "// });\r",
+                    "\r",
+                    "// Just run success for now\r",
+                    "successCallback();"
+                ],
+                "name": "tap"
+            },
+            "designerId": "51e9db8a-f205-4d3a-a624-378ed18bf4f2"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainView",
+                "selector": "mainview",
+                "xtype": "Ext.navigation.View"
+            },
+            "designerId": "ed84a4c2-2097-4f3b-b1e3-607495319c7a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "newLocationMap",
+                "selector": "navigationview #newLocationMap"
+            },
+            "designerId": "5b8dd5a9-2621-4277-b5e3-4687bf319753"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "loginPanel",
+                "selector": "mainview #loginPanel"
+            },
+            "designerId": "4bc740f2-2c6d-4ed4-bee3-fcfc264e0658"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "welcomePanel",
+                "selector": "navigationview #welcomePanel"
+            },
+            "designerId": "fade38f6-e579-409b-b1a7-aa4af3c7c505"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "patientform #patientButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "submit",
+                "implHandler": [
+                    "  var form = button.up('formpanel'),\t\t\t// Login form\r",
+                    "            values = form.getValues(),\t\t\t\t// Form values\r",
+                    "            mainView = this.getMainView(),\t\t\t// Main view\r",
+                    "            loginPanel = this.getLoginPanel(),\t\t// Login and register buttons\r",
+                    "            welcomePanel = this.getWelcomePanel();\t// Welcome panel\r",
+                    "\r",
+                    "        // Success\r",
+                    "        var successCallback = function(resp, ops) {\r",
+                    "\r",
+                    "            // Go back\r",
+                    "            mainView.pop();\r",
+                    "\r",
+                    "            // Hide login panel\r",
+                    "            loginPanel.hide();\r",
+                    "\r",
+                    "            // Show welcome panel\r",
+                    "         //   welcomePanel.show();\r",
+                    "\r",
+                    "        };\r",
+                    "\r",
+                    "        // Failure\r",
+                    "        var failureCallback = function(resp, ops) {\r",
+                    "\r",
+                    "            // Show login failure error\r",
+                    "            Ext.Msg.alert(\"Registration Failure\", resp);\r",
+                    "\r",
+                    "        };\r",
+                    "\r",
+                    "\r",
+                    "        // TODO: Register using server-side authentication service\r",
+                    "        // Ext.Ajax.request({\r",
+                    "        //\t\turl: \"/api/register\",\r",
+                    "        //\t\tparams: values,\r",
+                    "        //\t\tsuccess: successCallback,\r",
+                    "        //\t\tfailure: failureCallback\r",
+                    "        // });\r",
+                    "\r",
+                    "        // Just run success for now\r",
+                    "        successCallback();"
+                ],
+                "name": "tap"
+            },
+            "designerId": "1520470a-fcb9-4de3-9c5a-b223ac43f2da"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "navigationview #addLocationButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "onAddLocationTap",
+                "implHandler": [
+                    "// Show the \"add new location\" panel\r",
+                    "this.getNavigationView().push({\r",
+                    "    xtype: 'formpanel',\r",
+                    "    title: 'New location'\r",
+                    "});\r",
+                    "\r",
+                    "// Hide the toolbar buttons\r",
+                    "this.hideButtons();"
+                ],
+                "name": "tap"
+            },
+            "designerId": "198fcdc6-3eab-4f43-8963-5d8f2666dcd1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "navigationview #listPanel list",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onLocationTap",
+                "implHandler": [
+                    "// Build the location\r",
+                    "var latitude = record.get('latitude'),\r",
+                    "    longitude = record.get('longitude'),\r",
+                    "    location = new google.maps.LatLng(latitude, longitude);\r",
+                    "\r",
+                    "// Find the map\r",
+                    "var map = this.getMapView();\r",
+                    "\r",
+                    "// Center the map at the location\r",
+                    "map.setMapOptions({\r",
+                    "    center: location\r",
+                    "});\r",
+                    "\r",
+                    "// Show toolbar buttons\r",
+                    "this.showButtons();\r",
+                    "\r",
+                    "// Remove the location list panel\r",
+                    "this.getNavigationView().pop();"
+                ],
+                "name": "disclose"
+            },
+            "designerId": "4dabd75c-0f52-4d22-b4bd-78b1516af33f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "navigationview #listPanel list",
+                "designer|targetType": "Ext.Button",
+                "fn": "onListLocationsTap",
+                "implHandler": [
+                    "// Show the list panel view\r",
+                    "this.getNavigationView().push({\r",
+                    "    xtype: 'listpanel',\r",
+                    "    title: 'List spot'\r",
+                    "});\r",
+                    "\r",
+                    "// Hide toolbar buttons\r",
+                    "this.hideButtons();"
+                ],
+                "name": "tap"
+            },
+            "designerId": "e77dbc17-0722-4167-addd-4ae32372689e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "navigationview",
+                "designer|targetType": "Ext.navigation.View",
+                "fn": "onBack",
+                "implHandler": [
+                    "// Show toolbar buttons\r",
+                    "this.showButtons();"
+                ],
+                "name": "back"
+            },
+            "designerId": "2f5927a4-f8b4-4339-a1bc-40aeca83bd16"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "navigationview",
+                "designer|targetType": "Ext.navigation.View",
+                "fn": "onStart",
+                "implHandler": [
+                    "// Show toolbar buttons\r",
+                    "this.showButtons();"
+                ],
+                "name": "activate"
+            },
+            "designerId": "11fdf800-5290-4ca2-a4da-b0d2ce2a141a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "navigationview #locationTextField",
+                "designer|targetType": "Ext.field.Text",
+                "fn": "onNewLocationPositionChange",
+                "implHandler": [
+                    "// Find the map\r",
+                    "var map = this.getNewLocationMap().getMap();\r",
+                    "\r",
+                    "// Build a marker if there isn't one\r",
+                    "if (!this.newLocationMapMarker) {\r",
+                    "    this.newLocationMapMarker = new google.maps.Marker();\r",
+                    "}\r",
+                    "\r",
+                    "// Hide the map marker\r",
+                    "this.newLocationMapMarker.setMap(null);\r",
+                    "\r",
+                    "// Geocode the string\r",
+                    "var me = this;\r",
+                    "this.geocodeString(newValue, function(position) {\r",
+                    "\r",
+                    "    // Move the map to the position\r",
+                    "    map.setOptions({\r",
+                    "        center: position,\r",
+                    "        zoom: 15\r",
+                    "    });\r",
+                    "\r",
+                    "    // Drop a marker there\r",
+                    "    me.newLocationMapMarker.setOptions({\r",
+                    "        map: map,\r",
+                    "        position: position,\r",
+                    "        animation: google.maps.Animation.DROP\r",
+                    "    });\r",
+                    "\r",
+                    "});"
+                ],
+                "name": "change"
+            },
+            "designerId": "a54daefa-3bc0-4737-b680-95421cfd3aa9"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "addLocationButton",
+                "selector": "navigationview #addLocationButton",
+                "xtype": "Ext.Button"
+            },
+            "designerId": "9338f554-44e2-46f5-b8d7-7e204ecbfa96"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "listLocationsButton",
+                "selector": "navigationview #listLocationsButton",
+                "xtype": "Ext.Button"
+            },
+            "designerId": "c3581126-d58a-487f-a153-7f20adcc3bef"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "navigationView",
+                "selector": "navigationview",
+                "xtype": "Ext.navigation.View"
+            },
+            "designerId": "1a606da8-cad5-4952-a60a-b32edd06f7cf"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "navigationview #saveLocationButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "onSaveLocationButtonTap",
+                "implHandler": [
+                    "// Get the form and its values\r",
+                    "var form = this.getNewLocationForm(),\r",
+                    "    values = form.getValues();\r",
+                    "\r",
+                    "// Get the locations store\r",
+                    "var store = Ext.getStore('Locations');\r",
+                    "\r",
+                    "// Get the map object\r",
+                    "var map = this.getMapView().getMap();\r",
+                    "\r",
+                    "// Geocode the string, and then...\r",
+                    "var me = this;\r",
+                    "this.geocodeString(values.location, function(position) {\r",
+                    "\r",
+                    "    // If there's a valid position...\r",
+                    "    if (position) {\r",
+                    "\r",
+                    "        // Add this to the store\r",
+                    "        store.add({\r",
+                    "            name: values.name,\r",
+                    "            description: values.description,\r",
+                    "            latitude: position.lat(),\r",
+                    "            longitude: position.lng()\r",
+                    "        });\r",
+                    "\r",
+                    "        // Build a list of markers if we don't have one\r",
+                    "        if (!me.markers) {\r",
+                    "            me.markers = [];\r",
+                    "        }\r",
+                    "\r",
+                    "        // Drop a marker\r",
+                    "        var marker = new google.maps.Marker({\r",
+                    "            position: position,\r",
+                    "            map: map,\r",
+                    "            animation: google.maps.Animation.DROP\r",
+                    "        });\r",
+                    "        me.markers.push(marker);\r",
+                    "\r",
+                    "        // Move the map there\r",
+                    "        map.setOptions({\r",
+                    "            center: position\r",
+                    "        });\r",
+                    "\r",
+                    "        // Go back to the map view\r",
+                    "        me.getNavigationView().pop();\r",
+                    "\r",
+                    "        // Show the navbar buttons\r",
+                    "        me.showButtons();\r",
+                    "\r",
+                    "    }\r",
+                    "\r",
+                    "});"
+                ],
+                "name": "tap"
+            },
+            "designerId": "d24d2ab3-4aed-4d08-8a71-3b93f8fd9cfb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "navigationview #listPanel list",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onLocationSwipe",
+                "implHandler": [
+                    "// Build the title and message\r",
+                    "var title = 'Delete',\r",
+                    "    message = 'Delete ' + record.get('name') + '?';\r",
+                    "\r",
+                    "// Confirm the deletion, and then...\r",
+                    "var me = this;\r",
+                    "Ext.Msg.confirm(title, message, function(response) {\r",
+                    "\r",
+                    "    // If we get a \"yes\"...\r",
+                    "    if (response == 'yes') {\r",
+                    "\r",
+                    "        // Get the store\r",
+                    "        var store = Ext.getStore('Locations');\r",
+                    "\r",
+                    "        // Do the deletion from the store\r",
+                    "        store.remove(record);\r",
+                    "\r",
+                    "        // Find and remove the marker\r",
+                    "        me.markers.forEach(function(marker, index) {\r",
+                    "\r",
+                    "            // Get the values to compare\r",
+                    "            var markerLat = marker.getPosition().lat(),\r",
+                    "                markerLng = marker.getPosition().lng(),\r",
+                    "                removedLat = record.get('latitude'),\r",
+                    "                removedLng = record.get('longitude');\r",
+                    "\r",
+                    "            // Should we remove them?\r",
+                    "            // This will remove two markers at the same location.\r",
+                    "            if ((markerLat == removedLat) && (markerLng == removedLng)) {\r",
+                    "                marker.setMap(null);\r",
+                    "                me.markers.splice(index, 1);\r",
+                    "            }\r",
+                    "\r",
+                    "        });\r",
+                    "\r",
+                    "        // If we've removed the last one, go back to the main menu\r",
+                    "        if (store.getCount() === 0) {\r",
+                    "            me.getNavigationView().pop();\r",
+                    "            me.showButtons();\r",
+                    "        }\r",
+                    "\r",
+                    "    }\r",
+                    "\r",
+                    "});"
+                ],
+                "name": "itemswipe"
+            },
+            "designerId": "1fada37b-da56-4641-be50-c292349a8371"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "showButtons",
+                "implHandler": [
+                    "// Do we have any locations to show?\r",
+                    "var locationCount = Ext.getStore('Locations').getCount(),\r",
+                    "    hasLocations = (locationCount !== 0);\r",
+                    "\r",
+                    "// Show the \"add location\" button\r",
+                    "\r",
+                    "this.getAddLocationButton().show();\r",
+                    "\r",
+                    "// Show the \"list locations\" button if we should\r",
+                    "if (hasLocations) {\r",
+                    "    this.getListLocationsButton().show();\r",
+                    "} else {\r",
+                    "    this.getListLocationsButton().hide();\r",
+                    "}"
+                ]
+            },
+            "designerId": "443c2b7e-43d5-4fa1-825a-00244f87e23f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "hideButtons",
+                "implHandler": [
+                    "// Show both buttons on the toolbar\r",
+                    "this.getAddLocationButton().hide();\r",
+                    "this.getListLocationsButton().hide();"
+                ]
+            },
+            "designerId": "c03547fa-c4a7-4b96-94c7-e0b939db2677"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "str",
+                    "callback"
+                ],
+                "fn": "geocodeString",
+                "implHandler": [
+                    "// Build a Google Maps geocoder and its options\r",
+                    "var geocoder = new google.maps.Geocoder(),\r",
+                    "    options = { address: str };\r",
+                    "\r",
+                    "// Turn the string into a location\r",
+                    "geocoder.geocode(options, function(results, status) {\r",
+                    "    if (status == \"OK\") {\r",
+                    "        callback(results[0].geometry.location);\r",
+                    "    } else {\r",
+                    "        callback(null);\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "4318c1ff-1370-4a91-861b-5445b796a820"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mapView",
+                "selector": "navigationview #map",
+                "xtype": "Ext.Map"
+            },
+            "designerId": "edc9b434-a3c1-4156-8993-64b569d7ae5c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mapPanel",
+                "selector": "navigationview #mapPanel",
+                "xtype": "Ext.Panel"
+            },
+            "designerId": "83e6914f-7c89-4d12-9331-fce4a1062914"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "newLocationForm",
+                "selector": "navigationview #formPanel"
+            },
+            "designerId": "841b42f7-f03f-4d96-81b9-8733dc21bc5b"
+        }
+    ]
+}

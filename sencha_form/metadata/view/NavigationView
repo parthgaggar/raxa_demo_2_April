@@ -1,0 +1,76 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "navigationview",
+        "designer|userClassName": "NavigationView",
+        "fullscreen": true,
+        "itemId": "navigationview"
+    },
+    "designerId": "bda78f2e-97e6-45e3-813b-7e1690c12e8f",
+    "cn": [
+        {
+            "type": "Ext.navigation.Bar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "NavigationBar",
+                "docked": "top"
+            },
+            "designerId": "9f85177b-f920-4c7a-900a-1960a2aef57d",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "List Locations Button",
+                        "iconCls": "more",
+                        "itemId": "listLocationsButton",
+                        "text": null
+                    },
+                    "designerId": "8ab326e0-1450-49d2-a9b7-2cc2ff3f09b0"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "designer|displayName": "Add Location Button",
+                        "docked": null,
+                        "iconAlign": null,
+                        "iconCls": "add",
+                        "itemId": "addLocationButton",
+                        "text": null
+                    },
+                    "designerId": "883f151d-ceb6-4f1d-92c2-68d66d4473fb"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "26543947-121f-41e0-aea2-19c19edc9141",
+            "masterInstanceId": "46112402-0c63-4473-9bdf-4616bdcb5da6"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Model"
+    },
+    "designerId": "900330e1-36f6-43c1-be1e-36b47ae2a6d8",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "username"
+            },
+            "designerId": "8311bfb1-bd52-4ed1-bf4b-66bf1c9ea12f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "password"
+            },
+            "designerId": "8266ef0c-ba62-49df-b5d4-224e38ac08ab"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "patientid"
+            },
+            "designerId": "c91ee8b8-50f9-4b74-9432-293069241168"
+        }
+    ]
+}

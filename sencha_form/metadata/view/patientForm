@@ -1,0 +1,169 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "patientForm",
+        "designer|userClassName": "patientForm",
+        "layout": "vbox",
+        "scrollable": "vertical",
+        "singleton": null
+    },
+    "designerId": "cfd6c239-cc51-4228-86d7-5187e64ba353",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "patientform"
+            },
+            "designerId": "934c694e-e364-4ceb-9543-cb2af9a7a048",
+            "cn": [
+                {
+                    "type": "Ext.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Patient Id",
+                        "maxLength": null,
+                        "name": "id"
+                    },
+                    "designerId": "46686771-93df-4b14-ae2f-45633700aa3e"
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "emergency",
+                        "height": "80%",
+                        "label": "Disease",
+                        "options": [
+                            "[\r",
+                            "      {text: 'Malaria',  value: 'malaria'},\r",
+                            "      {text: 'Dengue', value: 'dengue'},\r",
+                            "      {text: 'Typhiod',  value: 'typhiod'}\r",
+                            "]"
+                        ]
+                    },
+                    "designerId": "3578d22b-eb20-45aa-b04e-60bcbbb93657"
+                },
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "activeLabel": "Yes",
+                        "height": "60%",
+                        "inactiveLabel": "No",
+                        "label": "Emergency",
+                        "name": "Emergency"
+                    },
+                    "designerId": "fc064b27-ee1e-4876-92b8-d1e871027ba6"
+                },
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "",
+                        "height": 60,
+                        "label": "Location",
+                        "name": "location"
+                    },
+                    "designerId": "4c9224ee-2387-4559-9c83-7007aa8e57d1"
+                },
+                {
+                    "type": "Ext.Map",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 250,
+                        "itemId": "savedLocationMap",
+                        "mapListeners": [
+                            "{dragstart: function() {\r",
+                            "                    var segmented = Ext.getCmp('segmented'),\r",
+                            "                        pressedButtons = segmented.getPressedButtons().slice(),\r",
+                            "                        trackingIndex = pressedButtons.indexOf(trackingButton);\r",
+                            "                    if (trackingIndex != -1) {\r",
+                            "                        pressedButtons.splice(trackingIndex, 1);\r",
+                            "                        segmented.setPressedButtons(pressedButtons);\r",
+                            "                    }\r",
+                            "                }\r",
+                            "}"
+                        ],
+                        "mapOptions": [
+                            "{\r",
+                            "    \r",
+                            "                center : new google.maps.LatLng(28.63,77),  \r",
+                            "                zoom : 12,\r",
+                            "                mapTypeId : google.maps.MapTypeId.ROADMAP,\r",
+                            "                navigationControl: true,\r",
+                            "                navigationControlOptions: {\r",
+                            "                    style: google.maps.NavigationControlStyle.DEFAULT\r",
+                            "                }\r",
+                            "}"
+                        ]
+                    },
+                    "configAlternates": {
+                        "useCurrentLocation": "object"
+                    },
+                    "designerId": "b1291ba7-e695-4313-b4eb-3e70c6b78d53"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 60,
+                        "label": "Additional Information",
+                        "name": "info",
+                        "placeHolder": "Enter your symptoms/condition"
+                    },
+                    "designerId": "efe679cf-3835-4a34-8b4f-69593cc978b4"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|uiInterfaceName": "confirm",
+                "iconCls": null,
+                "itemId": "patientButton",
+                "text": "Add Location",
+                "ui": "confirm"
+            },
+            "designerId": "f94d952b-a4de-4143-9faf-2bfa1437b1b2"
+        }
+    ]
+}

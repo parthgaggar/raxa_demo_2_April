@@ -1,0 +1,61 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "listpanel",
+        "designer|userClassName": "ListPanel",
+        "id": "listPanel"
+    },
+    "designerId": "861239a8-8acc-4560-961d-9dd54b9a3910",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "List instruction label",
+                "html": "Swipe to remove a location.",
+                "padding": 10,
+                "style": "color: #999; text-align: center;"
+            },
+            "designerId": "236a4d52-b67c-473f-9829-c647401f2ff4"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Locations list",
+                "store": "Locations"
+            },
+            "designerId": "84537a2e-c66a-458a-a4dc-a2b12057a11d",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "Location template",
+                        "implHandler": [
+                            "<div>List Item {string}</div>"
+                        ]
+                    },
+                    "designerId": "d9033e04-2edf-41fd-a125-c9ef34d5fa3a"
+                }
+            ]
+        }
+    ]
+}

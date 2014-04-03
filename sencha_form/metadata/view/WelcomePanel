@@ -1,0 +1,103 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "welcomePanel",
+        "designer|userClassName": "WelcomePanel",
+        "docked": null,
+        "itemId": null,
+        "styleHtmlContent": true
+    },
+    "designerId": "46112402-0c63-4473-9bdf-4616bdcb5da6",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": null,
+                "iconCls": "compose",
+                "scrollable": null,
+                "title": "Form"
+            },
+            "designerId": "541c7380-0e8b-481c-8703-8e31fc0c1fb9",
+            "masterInstanceId": "cfd6c239-cc51-4228-86d7-5187e64ba353"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "favorites",
+                "title": "Notification"
+            },
+            "designerId": "a2a598eb-a37f-46ba-bf86-955a36853380",
+            "masterInstanceId": "cc838373-7b03-449f-aa05-1fc0f7d1c0ad"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "reply",
+                "title": "Feedback"
+            },
+            "designerId": "7f8a0fb5-01e5-4fd5-94ea-b7d58e976244",
+            "masterInstanceId": "646bbc70-0765-4416-8a74-b41ff49d7c95"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Map panel",
+                "iconCls": "maps",
+                "title": "Locations"
+            },
+            "designerId": "90811ca5-61d9-44cd-ad30-4ce0f78aaafc",
+            "cn": [
+                {
+                    "type": "Ext.Map",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "Map",
+                        "height": 200
+                    },
+                    "designerId": "c27ddc71-60e1-4079-9f03-8c3a1eed802c"
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Bar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom"
+            },
+            "designerId": "b0e25b35-db33-455f-be10-ff9d5897f2d0"
+        }
+    ]
+}

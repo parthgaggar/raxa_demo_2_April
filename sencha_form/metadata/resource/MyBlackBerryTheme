@@ -1,0 +1,18 @@
+{
+    "type": "bb10themeresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyBlackBerryTheme"
+    },
+    "designerId": "1f40f1b2-97e3-4a62-85da-b64d7ecca87d",
+    "storage": {
+        "needsCompile": false,
+        "simple": {},
+        "nameIndex": 1,
+        "varData": {}
+    }
+}

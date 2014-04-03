@@ -1,0 +1,109 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "formpanel",
+        "designer|userClassName": "FormPanel",
+        "id": "formPanel"
+    },
+    "designerId": "1954417a-e467-44df-a621-ff61a5347fce",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Form fieldset",
+                "itemId": "formFieldSet",
+                "title": "Location Settings"
+            },
+            "designerId": "302d6d61-870e-4cf7-a902-805511efc230",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoCapitalize": true,
+                        "autoCorrect": true,
+                        "itemId": "nameTextField",
+                        "label": "Field",
+                        "labelWrap": true,
+                        "name": "name",
+                        "placeHolder": "House name",
+                        "required": true
+                    },
+                    "designerId": "ede7a50a-ee07-4766-b185-d025cdc68963"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "locationTextField",
+                        "label": "Location",
+                        "labelWrap": true,
+                        "name": "Location",
+                        "placeHolder": "Enter city name",
+                        "required": true
+                    },
+                    "designerId": "5c89f06e-20d9-4d7f-a2ea-fb13259e790f"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "descriptionTextArea",
+                        "label": "Description",
+                        "name": "description"
+                    },
+                    "designerId": "595ab123-7e9f-4cfc-ac73-2505e40e2422"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "saveLocationButton",
+                        "margin": 10,
+                        "text": "Add location"
+                    },
+                    "designerId": "377e94e5-cb5c-4280-8c8f-80f86a6a6f23"
+                },
+                {
+                    "type": "Ext.Map",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 250,
+                        "itemId": "newLocationMap"
+                    },
+                    "designerId": "efb8a9eb-d2b0-4b5d-8485-f8c92ff924b6"
+                }
+            ]
+        }
+    ]
+}
