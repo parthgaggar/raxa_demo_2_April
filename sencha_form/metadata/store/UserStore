@@ -6,6 +6,16 @@
     },
     "codeClass": null,
     "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "data": [
+            "[\r",
+            "        { username: 'Ed',    password: 'Spencer' },\r",
+            "        { username: 'Tommy', password: 'Maintz' },\r",
+            "        { username: 'Aaron', password: 'Conran' },\r",
+            "        { username: 'Jamie', password: 'Avins' }\r",
+            "    ]"
+        ],
         "designer|userClassName": "UserStore",
         "model": "userStore",
         "storeId": "UserStore"
@@ -20,7 +30,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "url": "http://localhost:8081/openmrs-standalone/ws/rest/v1/location?v=full"
+                "url": "http://localhost/architect_project/sencha_form/UserStore.json"
             },
             "designerId": "e044f2b6-7e33-4a20-b3c5-6b2e1273181c",
             "cn": [
@@ -32,6 +42,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|createAlias": "MyJsonReader",
+                        "designer|displayName": "DataReader",
                         "rootProperty": "results"
                     },
                     "designerId": "84b751bf-7f62-453f-b9e7-dd6f896c3b7c"

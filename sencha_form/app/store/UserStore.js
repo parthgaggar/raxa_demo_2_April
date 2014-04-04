@@ -23,13 +23,33 @@ Ext.define('raxa.store.UserStore', {
     ],
 
     config: {
+        autoLoad: true,
+        autoSync: true,
+        data: [
+            {
+                username: 'Ed',
+                password: 'Spencer'
+            },
+            {
+                username: 'Tommy',
+                password: 'Maintz'
+            },
+            {
+                username: 'Aaron',
+                password: 'Conran'
+            },
+            {
+                username: 'Jamie',
+                password: 'Avins'
+            }
+        ],
         model: 'raxa.model.userStore',
         storeId: 'UserStore',
         proxy: {
             type: 'ajax',
-            url: 'http://localhost:8081/openmrs-standalone/ws/rest/v1/location?v=full',
+            url: 'http://localhost/architect_project/sencha_form/UserStore.json',
             reader: {
-                type: 'json',
+                type: 'MyJsonReader',
                 rootProperty: 'results'
             }
         }
