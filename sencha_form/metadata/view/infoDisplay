@@ -1,0 +1,107 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "infodis",
+        "designer|userClassName": "infoDisplay",
+        "hidden": true,
+        "id": "hospitalInfoPanel"
+    },
+    "designerId": "67ca48fa-94be-43c1-8996-0361d6f70b24",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();"
+                ]
+            },
+            "designerId": "195e22f8-0c69-43a5-8424-59e3fd9428d1"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "hospitalInfo",
+                "title": "Hospital Information"
+            },
+            "designerId": "9ffd7811-d1a1-4fb3-969a-e7598544c8e0",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "20%",
+                        "id": "hospitalName",
+                        "label": "Hospital Name",
+                        "readOnly": true
+                    },
+                    "designerId": "3f666ba4-f4d9-4e25-b2ca-920692d0f449"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "20%",
+                        "id": "hospitalState",
+                        "label": "State",
+                        "readOnly": true
+                    },
+                    "designerId": "18d8102c-3252-4685-bd4c-d348d99c4f4f"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "20%",
+                        "id": "hospitalCity",
+                        "label": "City",
+                        "readOnly": true
+                    },
+                    "designerId": "b20909ab-fff3-4046-b39f-072bee3dcbef"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "20%",
+                        "id": "hospitalSpec",
+                        "label": "Specialization",
+                        "readOnly": true
+                    },
+                    "designerId": "3227a8b9-6d21-41e8-b5ee-06d30752ba8e"
+                }
+            ]
+        }
+    ]
+}

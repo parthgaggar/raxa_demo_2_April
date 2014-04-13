@@ -7,20 +7,28 @@
     "codeClass": null,
     "userConfig": {
         "controllers": [
-            "Account"
+            "Account",
+            "listTool",
+            "patientForm",
+            "sortList",
+            "mainTool"
         ],
         "models": [
             "userStore",
-            "Location"
+            "Location",
+            "hospitalmodel"
         ],
         "name": "raxa",
         "requires": [
-            "Ext.MessageBox"
+            "Ext.MessageBox",
+            "Ext.Panel",
+            "Ext.Spacer",
+            "raxa.utils.Global"
         ],
         "stores": [
             "Locations",
             "PlacesStore",
-            "UserStore"
+            "hospitalstore"
         ],
         "views": [
             "MainView",
@@ -31,7 +39,11 @@
             "feedbackForm",
             "notificationpanel",
             "FormPanel",
-            "NavigationView"
+            "list",
+            "listTool",
+            "sortList",
+            "mainTool",
+            "infoDisplay"
         ]
     },
     "designerId": "application"

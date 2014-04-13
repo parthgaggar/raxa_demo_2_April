@@ -1,0 +1,131 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "mainTool"
+    },
+    "designerId": "fb801b1c-3b95-444b-9e0e-0d663c91321e",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "filterButton",
+                "selector": "#filter1"
+            },
+            "designerId": "5d06a3a0-7011-4dd8-9d00-f24f62dab274"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "search",
+                "selector": "#mainSearch"
+            },
+            "designerId": "a9c89a53-a212-4910-b804-97e570542ab0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "filterBut",
+                "fn": "showFilter",
+                "implHandler": [
+                    "Ext.getCmp('filterbar').setHidden(false);\r",
+                    "\tif(Ext.getCmp('listDocs').getStore().isFiltered())\r",
+                    "\t{Ext.getCmp('clearFilter').setHidden(false);\r",
+                    "\t  Ext.getCmp('clearFilter').setUi('action');\r",
+                    "\t}"
+                ],
+                "name": "tap"
+            },
+            "designerId": "bb07e90a-227e-4abc-be30-fa4a6db4f09a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "search",
+                "designer|targetType": null,
+                "fn": "onSearchClearIconTap",
+                "implHandler": [
+                    "Ext.getCmp('listDocs').getStore().clearFilter();"
+                ],
+                "name": "clearicontap"
+            },
+            "designerId": "7dbd2fe0-65f8-4930-90c5-41b73a06a083"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "search",
+                "designer|params": [
+                    "field"
+                ],
+                "fn": "onSearchKeyUp",
+                "implHandler": [
+                    "     var value = field.getValue();\r",
+                    "\r",
+                    "            var store = Ext.getCmp('listDocs').getStore();\r",
+                    "\r",
+                    "           store.clearFilter( );\r",
+                    "\r",
+                    "        if (value) {\r",
+                    "            var searches = value.split(','),\r",
+                    "                regexps = [],\r",
+                    "                i, regex;\r",
+                    "\r",
+                    "            for (i = 0; i < searches.length; i++) {\r",
+                    "                if (!searches[i]) continue;\r",
+                    "\r",
+                    "                regex = searches[i].trim();\r",
+                    "                regex = regex.replace(/[\\-\\[\\]\\/\\{\\}\\(\\)\\*\\+\\?\\.\\\\\\^\\$\\|]/g, \"\\\\$&\");\r",
+                    "\r",
+                    "                regexps.push(new RegExp(regex.trim(), 'i'));\r",
+                    "            }\r",
+                    "\r",
+                    "            store.filter(function(record) {\r",
+                    "                var matched = [];\r",
+                    "\r",
+                    "                for (i = 0; i < regexps.length; i++) {\r",
+                    "                    var search = regexps[i],\r",
+                    "                        didMatch = search.test(record.get('hospital') /*+ ' ' + record.get('lastName') */);\r",
+                    "\r",
+                    "                    matched.push(didMatch);\r",
+                    "                }\r",
+                    "\r",
+                    "                return (regexps.length && matched.indexOf(true) !== -1);\r",
+                    "            });\r",
+                    "        }"
+                ],
+                "name": "keyup"
+            },
+            "designerId": "53f3d566-c1dd-4ea0-8570-d53f194ef23d"
+        }
+    ]
+}

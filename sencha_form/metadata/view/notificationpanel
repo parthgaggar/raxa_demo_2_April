@@ -9,31 +9,5 @@
         "designer|userAlias": "notificationPanel",
         "designer|userClassName": "notificationpanel"
     },
-    "designerId": "cc838373-7b03-449f-aa05-1fc0f7d1c0ad",
-    "cn": [
-        {
-            "type": "Ext.Container",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|createAlias": ""
-            },
-            "designerId": "ec6670cf-f9e9-4567-8e0f-909c79768e5f"
-        },
-        {
-            "type": "Ext.Container",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|createAlias": null
-            },
-            "designerId": "1688c794-5631-4d85-829b-2c5331d1ce56"
-        }
-    ]
+    "designerId": "cc838373-7b03-449f-aa05-1fc0f7d1c0ad"
 }

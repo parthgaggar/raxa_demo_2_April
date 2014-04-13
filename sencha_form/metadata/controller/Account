@@ -80,28 +80,24 @@
                     "\tvalues = form.getValues(),\t\t\t\t// Form values\r",
                     "\tmainView = this.getMainView(),\t\t\t// Main view\r",
                     "\tloginPanel = this.getLoginPanel(),\t\t// Login and register buttons\r",
-                    "\twelcomePanel = this.getWelcomePanel(),\t// Welcome panel\r",
-                    "    welcomepanel = Ext.create('widget.welcomePanel'),\t// Registration form\r",
-                    "    navigationView=  this.getNavigationView();;\t// Navigation View\r",
-                    "// Success\r",
+                    "    welcomepanel = this.getWelcomePanel(),\r",
+                    "\twelcomePanel = Ext.create('widget.welcomePanel');\t// Welcome Panel\r",
+                    "    // Success\r",
                     "var successCallback = function(resp, ops) {\r",
                     "\r",
                     "    // Go back\r",
-                    "    mainView.pop();\r",
+                    "   mainView.pop();\r",
                     "\r",
                     "    // Hide login panel\r",
                     "    loginPanel.hide();\r",
                     "\r",
-                    "    // Show welcome panel\r",
-                    "  // welcomePanel.show();\r",
-                    "\r",
-                    "\r",
-                    "\r",
-                    "        // Navigate to welcome panel\r",
-                    "    navigationView.push({\r",
-                    "       xtype: \"welcomePanel\"\r",
+                    "  \r",
+                    " \r",
+                    "   \r",
+                    "// Navigate to welcome panel\r",
+                    "       mainView.push({\r",
+                    "            xtype: \"welcomePanel\"\r",
                     "        });\r",
-                    "\r",
                     "\r",
                     "};\r",
                     "\r",
@@ -145,14 +141,14 @@
                     "var form = button.up('formpanel'),\t\t\t// Login form\r",
                     "    values = form.getValues(),\t\t\t\t// Form values\r",
                     "    mainView = this.getMainView(),\t\t\t// Main view\r",
-                    "    loginPanel = this.getLoginPanel(),\t\t// Login and register buttons\r",
-                    "    welcomePanel = this.getWelcomePanel(),\t// Welcome panel\r",
-                    "    navigationView= this.getNavigationView(); \t// Navigation View\r",
+                    "    loginPanel = this.getLoginPanel();\t\t// Login and register buttons\r",
+                    "   // welcomePanel = this.getWelcomePanel();\t// Welcome panel\r",
+                    "\r",
                     "// Success\r",
                     "var successCallback = function(resp, ops) {\r",
                     "\r",
                     "    // Go back\r",
-                    "   // mainView.pop();\r",
+                    "    mainView.pop();\r",
                     "\r",
                     "    // Hide login panel\r",
                     "    loginPanel.hide();\r",
@@ -160,12 +156,11 @@
                     "    // Show welcome panel\r",
                     "   // welcomePanel.show();\r",
                     "\r",
-                    "\r",
-                    "      // Navigate to welcome panel\r",
-                    "        navigationView.push({\r",
+                    "         // Navigate to welcome panel\r",
+                    "   /*     mainView.push({\r",
                     "            xtype: \"welcomePanel\"\r",
                     "        });\r",
-                    "\r",
+                    "*/\r",
                     "\r",
                     "};\r",
                     "\r",
@@ -216,7 +211,7 @@
             "codeClass": null,
             "userConfig": {
                 "ref": "newLocationMap",
-                "selector": "navigationview #newLocationMap"
+                "selector": "mainview #newLocationMap"
             },
             "designerId": "5b8dd5a9-2621-4277-b5e3-4687bf319753"
         },
@@ -242,7 +237,7 @@
             "codeClass": null,
             "userConfig": {
                 "ref": "welcomePanel",
-                "selector": "navigationview #welcomePanel"
+                "selector": "mainview #welcomePanel"
             },
             "designerId": "fade38f6-e579-409b-b1a7-aa4af3c7c505"
         },
@@ -310,12 +305,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "navigationview #addLocationButton",
+                "designer|controlQuery": "mainview #addLocationButton",
                 "designer|targetType": "Ext.Button",
                 "fn": "onAddLocationTap",
                 "implHandler": [
                     "// Show the \"add new location\" panel\r",
-                    "this.getNavigationView().push({\r",
+                    "this.getMainView().push({\r",
                     "    xtype: 'formpanel',\r",
                     "    title: 'New location'\r",
                     "});\r",
@@ -335,7 +330,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "navigationview #listPanel list",
+                "designer|controlQuery": "mainview #listPanel list",
                 "designer|targetType": "Ext.dataview.List",
                 "fn": "onLocationTap",
                 "implHandler": [
@@ -356,7 +351,7 @@
                     "this.showButtons();\r",
                     "\r",
                     "// Remove the location list panel\r",
-                    "this.getNavigationView().pop();"
+                    "this.getMainView().pop();"
                 ],
                 "name": "disclose"
             },
@@ -370,12 +365,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "navigationview #listPanel list",
+                "designer|controlQuery": "mainview #listPanel list",
                 "designer|targetType": "Ext.Button",
                 "fn": "onListLocationsTap",
                 "implHandler": [
                     "// Show the list panel view\r",
-                    "this.getNavigationView().push({\r",
+                    "this.getMainView().push({\r",
                     "    xtype: 'listpanel',\r",
                     "    title: 'List spot'\r",
                     "});\r",
@@ -395,7 +390,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "navigationview",
+                "designer|controlQuery": "mainview",
                 "designer|targetType": "Ext.navigation.View",
                 "fn": "onBack",
                 "implHandler": [
@@ -414,7 +409,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "navigationview",
+                "designer|controlQuery": "mainview",
                 "designer|targetType": "Ext.navigation.View",
                 "fn": "onStart",
                 "implHandler": [
@@ -433,7 +428,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "navigationview #locationTextField",
+                "designer|controlQuery": "mainview #locationTextField",
                 "designer|targetType": "Ext.field.Text",
                 "fn": "onNewLocationPositionChange",
                 "implHandler": [
@@ -480,7 +475,7 @@
             "codeClass": null,
             "userConfig": {
                 "ref": "addLocationButton",
-                "selector": "navigationview #addLocationButton",
+                "selector": "mainview #addLocationButton",
                 "xtype": "Ext.Button"
             },
             "designerId": "9338f554-44e2-46f5-b8d7-7e204ecbfa96"
@@ -494,24 +489,10 @@
             "codeClass": null,
             "userConfig": {
                 "ref": "listLocationsButton",
-                "selector": "navigationview #listLocationsButton",
+                "selector": "mainview #listLocationsButton",
                 "xtype": "Ext.Button"
             },
             "designerId": "c3581126-d58a-487f-a153-7f20adcc3bef"
-        },
-        {
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "navigationView",
-                "selector": "navigationview",
-                "xtype": "Ext.navigation.View"
-            },
-            "designerId": "1a606da8-cad5-4952-a60a-b32edd06f7cf"
         },
         {
             "type": "controlleraction",
@@ -521,7 +502,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "navigationview #saveLocationButton",
+                "designer|controlQuery": "mainview #saveLocationButton",
                 "designer|targetType": "Ext.Button",
                 "fn": "onSaveLocationButtonTap",
                 "implHandler": [
@@ -569,7 +550,7 @@
                     "        });\r",
                     "\r",
                     "        // Go back to the map view\r",
-                    "        me.getNavigationView().pop();\r",
+                    "        me.getMainView().pop();\r",
                     "\r",
                     "        // Show the navbar buttons\r",
                     "        me.showButtons();\r",
@@ -590,7 +571,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "navigationview #listPanel list",
+                "designer|controlQuery": "mainview #listPanel list",
                 "designer|targetType": "Ext.dataview.List",
                 "fn": "onLocationSwipe",
                 "implHandler": [
@@ -631,7 +612,7 @@
                     "\r",
                     "        // If we've removed the last one, go back to the main menu\r",
                     "        if (store.getCount() === 0) {\r",
-                    "            me.getNavigationView().pop();\r",
+                    "            me.getMainView().pop();\r",
                     "            me.showButtons();\r",
                     "        }\r",
                     "\r",
@@ -727,7 +708,7 @@
             "codeClass": null,
             "userConfig": {
                 "ref": "mapView",
-                "selector": "navigationview #map",
+                "selector": "mainview #map",
                 "xtype": "Ext.Map"
             },
             "designerId": "edc9b434-a3c1-4156-8993-64b569d7ae5c"
@@ -741,7 +722,7 @@
             "codeClass": null,
             "userConfig": {
                 "ref": "mapPanel",
-                "selector": "navigationview #mapPanel",
+                "selector": "mainview #welcomePanell",
                 "xtype": "Ext.Panel"
             },
             "designerId": "83e6914f-7c89-4d12-9331-fce4a1062914"
@@ -755,7 +736,7 @@
             "codeClass": null,
             "userConfig": {
                 "ref": "newLocationForm",
-                "selector": "navigationview #formPanel"
+                "selector": "mainview #formPanel"
             },
             "designerId": "841b42f7-f03f-4d96-81b9-8733dc21bc5b"
         }

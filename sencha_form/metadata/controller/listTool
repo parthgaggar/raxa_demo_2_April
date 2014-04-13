@@ -1,0 +1,89 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "listTool"
+    },
+    "designerId": "45ca5471-5638-4f7e-8c39-d794dda72ca6",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "listDocs",
+                "selector": "#listDocs"
+            },
+            "designerId": "9d2eb388-6d1a-4c00-874b-b107ab2f0469"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "listDocs",
+                "designer|params": [
+                    "listDocs",
+                    "index",
+                    "target",
+                    "record"
+                ],
+                "fn": "showDetail",
+                "implHandler": [
+                    "var body2 = \"hospital : \"+record.get('hospital')+\"Specialization : \"+record.get('Specialization')+\" State :\"+record.get('State')+\" City :\"+record.get('City');\r",
+                    " \r",
+                    "      Ext.getCmp('hospitalName').setValue(record.get('hospital'));\r",
+                    "      Ext.getCmp('hospitalSpec').setValue(record.get('Specialization'));\r",
+                    "      Ext.getCmp('hospitalCity').setValue(record.get('City'));\r",
+                    "      Ext.getCmp('hospitalState').setValue(record.get('State'));\r",
+                    "\r",
+                    "  Ext.getCmp('hospitalInfoPanel').setHidden(false);\r",
+                    ""
+                ],
+                "name": "itemtap"
+            },
+            "designerId": "e306f4b6-9bb5-436b-a022-068253cfb5c8"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "clearFilter",
+                "fn": "clearFilter",
+                "implHandler": [
+                    "Ext.getCmp('listDocs').getStore().clearFilter();\r",
+                    "      Ext.getCmp('clearFilter').setHidden(true);"
+                ],
+                "name": "tap"
+            },
+            "designerId": "dab0a5a3-64f7-4ffa-bd65-066f7d1f1968"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "clearFilter",
+                "selector": "#clearFilter"
+            },
+            "designerId": "5767d57a-1f9b-4808-95ed-bdc908c4b025"
+        }
+    ]
+}

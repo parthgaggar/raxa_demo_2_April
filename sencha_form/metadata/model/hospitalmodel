@@ -6,9 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Location"
+        "designer|userClassName": "hospitalmodel"
     },
-    "designerId": "a9f06322-9017-4906-859e-7bd825f42db3",
+    "designerId": "3a922967-d179-4733-840a-25a14831d16a",
     "cn": [
         {
             "type": "Ext.data.Field",
@@ -18,11 +18,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "allowNull": false,
-                "name": "id",
-                "type": "int"
+                "name": "State"
             },
-            "designerId": "cefa4c13-8d3b-451a-9baf-cc3af034b242"
+            "designerId": "b5647d01-5164-4d7c-b294-22994c7a32ed"
         },
         {
             "type": "Ext.data.Field",
@@ -32,11 +30,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "allowNull": false,
-                "name": "name",
-                "type": "string"
+                "name": "City"
             },
-            "designerId": "58c3720b-6332-49eb-a5fe-5e35d7658611"
+            "designerId": "9f1506b9-c178-4465-9082-91f34c0779bf"
         },
         {
             "type": "Ext.data.Field",
@@ -46,11 +42,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "allowNull": false,
-                "name": "description",
-                "type": "string"
+                "name": "lat"
             },
-            "designerId": "2c9cb823-e8ab-4814-bec5-be61aa5272a1"
+            "designerId": "cfd6a14f-cf8f-4cdf-965f-ed1cf3ec34fa"
         },
         {
             "type": "Ext.data.Field",
@@ -60,11 +54,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "allowNull": false,
-                "name": "latitude",
-                "type": "float"
+                "name": "long"
             },
-            "designerId": "3456b599-14bc-44bf-a861-b361b1024828"
+            "designerId": "10db9f22-9675-4719-8b31-41ddf4a00231"
         },
         {
             "type": "Ext.data.Field",
@@ -74,11 +66,21 @@
             },
             "codeClass": null,
             "userConfig": {
-                "allowNull": false,
-                "name": "longitude",
-                "type": "float"
+                "name": "hospital"
             },
-            "designerId": "b3c88c7a-7956-4fad-9047-68db11c4fc32"
+            "designerId": "48aea883-c44d-4c3a-9105-c46c7baa1cff"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Specialization"
+            },
+            "designerId": "9c8795f9-e398-4d00-a89b-1cfc391c2b43"
         }
     ]
 }

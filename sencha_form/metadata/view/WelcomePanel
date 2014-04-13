@@ -59,33 +59,18 @@
             "masterInstanceId": "646bbc70-0765-4416-8a74-b41ff49d7c95"
         },
         {
-            "type": "Ext.Panel",
+            "type": "Ext.Map",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|displayName": "Map panel",
-                "iconCls": "maps",
-                "title": "Locations"
+                "designer|displayName": "Map",
+                "iconCls": "info",
+                "itemId": "map"
             },
-            "designerId": "90811ca5-61d9-44cd-ad30-4ce0f78aaafc",
-            "cn": [
-                {
-                    "type": "Ext.Map",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|displayName": "Map",
-                        "height": 200
-                    },
-                    "designerId": "c27ddc71-60e1-4079-9f03-8c3a1eed802c"
-                }
-            ]
+            "designerId": "ebc3ef22-ac47-4657-8126-1d64957dd949"
         },
         {
             "type": "Ext.tab.Bar",

@@ -1,0 +1,55 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "list",
+        "designer|userClassName": "list",
+        "emptyText": "<div style=\"margin-top: 20px; text-align: center\">No Matching Items</div>",
+        "grouped": true,
+        "height": null,
+        "requires": [
+            "raxa.store.hospitalstore",
+            "Ext.Toolbar",
+            "Ext.field.Search"
+        ],
+        "width": 200
+    },
+    "designerId": "12dcdf07-a02a-4014-87f1-0ea940e6f3a0",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div class=\"contact\"><strong>{hospital}</strong></div>"
+                ]
+            },
+            "designerId": "30c0ada6-9ff9-4c11-8aa7-e8f6c0bdb15f"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();\r",
+                    "this.setStore(Ext.create(\"raxa.store.hospitalstore\"));"
+                ]
+            },
+            "designerId": "42df2457-565e-4a15-b1e9-9b93a7c65e1c"
+        }
+    ]
+}

@@ -35,9 +35,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "autoCapitalize": true,
+                        "autoComplete": true,
                         "autoCorrect": true,
                         "itemId": "nameTextField",
-                        "label": "Field",
+                        "label": "Name",
                         "labelWrap": true,
                         "name": "name",
                         "placeHolder": "House name",
@@ -72,6 +73,7 @@
                     "userConfig": {
                         "itemId": "descriptionTextArea",
                         "label": "Description",
+                        "labelWrap": true,
                         "name": "description"
                     },
                     "designerId": "595ab123-7e9f-4cfc-ac73-2505e40e2422"

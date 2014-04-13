@@ -9,6 +9,10 @@
         "designer|userAlias": "patientForm",
         "designer|userClassName": "patientForm",
         "layout": "vbox",
+        "requires": [
+            "Ext.form.FieldSet",
+            "Ext.Menu"
+        ],
         "scrollable": "vertical",
         "singleton": null
     },
@@ -22,7 +26,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "patientform"
+                "bottom": "50%",
+                "centered": false,
+                "height": "55%",
+                "left": "0%",
+                "right": "20%",
+                "title": "patientform",
+                "top": "0%",
+                "width": null
             },
             "designerId": "934c694e-e364-4ceb-9543-cb2af9a7a048",
             "cn": [
@@ -34,6 +45,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "height": "10%",
                         "label": "Patient Id",
                         "maxLength": null,
                         "name": "id"
@@ -48,8 +60,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": "emergency",
-                        "height": "80%",
+                        "designer|displayName": "disease",
+                        "height": "10%",
                         "label": "Disease",
                         "options": [
                             "[\r",
@@ -70,7 +82,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "activeLabel": "Yes",
-                        "height": "60%",
+                        "height": "10%",
                         "inactiveLabel": "No",
                         "label": "Emergency",
                         "name": "Emergency"
@@ -86,7 +98,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|displayName": "",
-                        "height": 60,
+                        "height": "10%",
                         "label": "Location Detect",
                         "name": "detectLocation"
                     },
@@ -100,37 +112,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 250,
-                        "itemId": "savedLocationMap",
-                        "mapListeners": [
-                            "{dragstart: function() {\r",
-                            "                    var segmented = Ext.getCmp('segmented'),\r",
-                            "                        pressedButtons = segmented.getPressedButtons().slice(),\r",
-                            "                        trackingIndex = pressedButtons.indexOf(trackingButton);\r",
-                            "                    if (trackingIndex != -1) {\r",
-                            "                        pressedButtons.splice(trackingIndex, 1);\r",
-                            "                        segmented.setPressedButtons(pressedButtons);\r",
-                            "                    }\r",
-                            "                }\r",
-                            "}"
-                        ],
-                        "mapOptions": [
-                            "{\r",
-                            "  \r",
-                            "                center : new google.maps.LatLng(28.63,77),  \r",
-                            "                zoom : 12,\r",
-                            "                mapTypeId : google.maps.MapTypeId.ROADMAP,\r",
-                            "                navigationControl: true,\r",
-                            "                navigationControlOptions: {\r",
-                            "                    style: google.maps.NavigationControlStyle.DEFAULT\r",
-                            "                }\r",
-                            "}"
-                        ]
+                        "designer|createAlias": null,
+                        "designer|displayName": "map",
+                        "height": "35%",
+                        "itemId": "map2",
+                        "useCurrentLocation": true
                     },
-                    "configAlternates": {
-                        "useCurrentLocation": "object"
-                    },
-                    "designerId": "b1291ba7-e695-4313-b4eb-3e70c6b78d53"
+                    "designerId": "7ef0908a-746a-492b-9587-7e4c91fb038e"
                 },
                 {
                     "type": "Ext.field.TextArea",
@@ -140,7 +128,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 60,
+                        "height": "15%",
                         "label": "Additional Information",
                         "name": "info",
                         "placeHolder": "Enter your symptoms/condition"
@@ -150,6 +138,140 @@
             ]
         },
         {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "left",
+                "floatingCls": null,
+                "height": "100%",
+                "id": "list",
+                "layout": "fit",
+                "layout|flex": 1,
+                "left": null,
+                "width": "20%"
+            },
+            "designerId": "ea27340e-a66f-433c-bea2-e5e20b63aac2",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "100%",
+                        "width": null
+                    },
+                    "designerId": "b53c7c40-fa1f-4598-ab41-9a2475f1a233",
+                    "masterInstanceId": "737f1c36-307a-405c-a1d4-3b0b5d88d6af"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bottom": "0%",
+                "height": "30%",
+                "id": "info",
+                "layout": "card",
+                "layout|flex": 3,
+                "left": "0%",
+                "right": "20%",
+                "styleHtmlContent": true,
+                "top": "60%",
+                "width": null
+            },
+            "designerId": "0e1e59f1-4613-4d4e-8b81-8547d69fe366",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "top",
+                        "floatingCls": "x-panel",
+                        "height": "100%",
+                        "width": "100%"
+                    },
+                    "designerId": "b43c963f-c10d-41ad-b602-7c468010f763",
+                    "masterInstanceId": "67ca48fa-94be-43c1-8996-0361d6f70b24"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": null,
+                "floatingCls": "x-panel",
+                "height": "40%",
+                "id": "filter",
+                "layout": "card",
+                "layout|flex": 1.2,
+                "left": "80%",
+                "right": "0%",
+                "width": "20%"
+            },
+            "designerId": "c6c05928-4244-4376-8277-43eb995067ff",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": null,
+                        "bottom": null,
+                        "docked": null,
+                        "height": 278,
+                        "left": null,
+                        "right": null,
+                        "scrollable": false
+                    },
+                    "designerId": "cb7599ae-8831-4ab8-8043-f742aacdef9d",
+                    "masterInstanceId": "51125cae-220a-49ee-add5-9d7a662cb473"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "mainTool",
+                "docked": null,
+                "floatingCls": "x-panel",
+                "left": null,
+                "right": "0%",
+                "top": "45%",
+                "width": "20%"
+            },
+            "designerId": "0e9d275c-db1a-4cf4-b031-9eb0b65fd0fa",
+            "masterInstanceId": "da9a057f-1bff-4110-83bc-107d712def98"
+        },
+        {
             "type": "Ext.Button",
             "reference": {
                 "name": "items",
@@ -157,13 +279,28 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|uiInterfaceName": "confirm",
+                "docked": "bottom",
                 "iconCls": null,
                 "itemId": "patientButton",
-                "text": "Add Location",
-                "ui": "confirm"
+                "text": "submit"
             },
             "designerId": "f94d952b-a4de-4143-9faf-2bfa1437b1b2"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();\r",
+                    "Ext.getCmp('filter1').setLeft(Ext.getCmp('mainSearch').getWidth());"
+                ]
+            },
+            "designerId": "4b727fae-e6b2-4b2b-874f-171a937a9a79"
         }
     ]
 }

@@ -1,0 +1,44 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "patientForm"
+    },
+    "designerId": "56531e3c-5e2e-4a9e-a3e3-006611632798",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "filterButton",
+                "selector": "#filter1"
+            },
+            "designerId": "915b7aab-f335-43a7-899d-f7f81db1dfa7"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "filterBut",
+                "fn": "showFilter",
+                "implHandler": [
+                    "Ext.getCmp('filterbar').setHidden(false);"
+                ],
+                "name": "tap"
+            },
+            "designerId": "92340cb2-54e0-4acd-876a-3e6f0767035a"
+        }
+    ]
+}

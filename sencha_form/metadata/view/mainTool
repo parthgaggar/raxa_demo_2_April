@@ -1,0 +1,57 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "border": null,
+        "designer|userAlias": "mainTool",
+        "designer|userClassName": "mainTool",
+        "height": "5%",
+        "requires": [
+            "Ext.field.Search"
+        ],
+        "style": null,
+        "width": null
+    },
+    "designerId": "da9a057f-1bff-4110-83bc-107d712def98",
+    "cn": [
+        {
+            "type": "Ext.field.Search",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "left",
+                "id": "mainSearch",
+                "label": null,
+                "labelWidth": "100%",
+                "left": "true",
+                "placeHolder": "find location",
+                "width": null
+            },
+            "designerId": "642962ff-723e-4d13-8df8-3c0906a9a915"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|uiInterfaceName": "confirm",
+                "docked": "left",
+                "id": "filter1",
+                "itemId": null,
+                "text": "filter",
+                "ui": "confirm"
+            },
+            "designerId": "eb6de96a-0e19-4d07-872b-11d0a86af320"
+        }
+    ]
+}

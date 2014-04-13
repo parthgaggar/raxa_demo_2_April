@@ -20,7 +20,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "url": "http://localhost:8081/openmrs-standalone/ws/rest/v1/location?v=full"
+                "url": "/architect_project/sencha_form/placesStore.json"
             },
             "designerId": "3147e10b-6009-4c45-bf7a-b4d217b4420c",
             "cn": [

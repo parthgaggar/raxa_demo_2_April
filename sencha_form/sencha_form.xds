@@ -25,8 +25,8 @@
         "buildShouldOverwriteIndex": true,
         "generateArchitectVersion": true
     },
-    "xdsVersion": "3.0.3",
-    "xdsBuild": 1382,
+    "xdsVersion": "3.0.4",
+    "xdsBuild": 1386,
     "schemaVersion": 1,
     "upgradeVersion": 300000000004,
     "framework": "touch23",
@@ -35,25 +35,34 @@
             "ed028afd-d71b-4509-b56c-0ed684fd01e1",
             "5f766276-5fd4-4afa-8cf9-aad3c3c41eee",
             "62ee9761-4c3f-444d-9653-931250a2298a",
-            "bda78f2e-97e6-45e3-813b-7e1690c12e8f",
             "46112402-0c63-4473-9bdf-4616bdcb5da6",
             "cfd6c239-cc51-4228-86d7-5187e64ba353",
             "646bbc70-0765-4416-8a74-b41ff49d7c95",
             "cc838373-7b03-449f-aa05-1fc0f7d1c0ad",
             "861239a8-8acc-4560-961d-9dd54b9a3910",
-            "1954417a-e467-44df-a621-ff61a5347fce"
+            "1954417a-e467-44df-a621-ff61a5347fce",
+            "12dcdf07-a02a-4014-87f1-0ea940e6f3a0",
+            "737f1c36-307a-405c-a1d4-3b0b5d88d6af",
+            "51125cae-220a-49ee-add5-9d7a662cb473",
+            "da9a057f-1bff-4110-83bc-107d712def98",
+            "67ca48fa-94be-43c1-8996-0361d6f70b24"
         ],
         "store": [
             "70af2787-fbd8-4794-afa6-c2cec8851ef4",
             "ff0016c4-ffdf-45bf-8f36-451e94a66d21",
-            "e314c88b-1721-4da7-8efd-8f9445d096d7"
+            "7473c35e-d6fa-44d0-ad47-823e2bb86121"
         ],
         "controller": [
-            "281224ab-8461-4b2e-9888-353e3182bb15"
+            "281224ab-8461-4b2e-9888-353e3182bb15",
+            "45ca5471-5638-4f7e-8c39-d794dda72ca6",
+            "56531e3c-5e2e-4a9e-a3e3-006611632798",
+            "3bbe6a2e-29c6-4a90-9750-5be1d7fdfb58",
+            "fb801b1c-3b95-444b-9e0e-0d663c91321e"
         ],
         "model": [
             "900330e1-36f6-43c1-be1e-36b47ae2a6d8",
-            "a9f06322-9017-4906-859e-7bd825f42db3"
+            "a9f06322-9017-4906-859e-7bd825f42db3",
+            "3a922967-d179-4733-840a-25a14831d16a"
         ],
         "resource": [
             "82da3b1e-2a17-4d60-972e-6d7d2cfca4d3",

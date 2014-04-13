@@ -1,0 +1,175 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "sortList"
+    },
+    "designerId": "3bbe6a2e-29c6-4a90-9750-5be1d7fdfb58",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "sortHospital",
+                "selector": "#sortHospital"
+            },
+            "designerId": "b4858925-f59c-404f-abab-b6a9f6cba7c5"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "sortSpecialization",
+                "selector": "#sortSpecialization"
+            },
+            "designerId": "ae8b34eb-1799-4c08-aacd-0a33ba85fac3"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "sortState",
+                "selector": "#sortState"
+            },
+            "designerId": "7006158e-65cc-4a65-8879-4993de1a42eb"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "sortCity",
+                "selector": "#sortCity"
+            },
+            "designerId": "176afbd8-2ff4-4d8b-a74e-947a1edcbf12"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "sortHospital",
+                "fn": "sortHospital",
+                "implHandler": [
+                    "this.group('hospital');"
+                ],
+                "name": "check"
+            },
+            "designerId": "e4d37916-f939-4610-8d7b-4c89fbb84811"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "sortSpecialization",
+                "fn": "sortSpecialization",
+                "implHandler": [
+                    "this.group('specialization');"
+                ],
+                "name": "check"
+            },
+            "designerId": "624a2d57-3db7-41cd-8acd-ea17b0c489fb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "sortState",
+                "fn": "sortState",
+                "implHandler": [
+                    "this.group('state');"
+                ],
+                "name": "check"
+            },
+            "designerId": "ab32e607-5186-4e41-aa50-7639f8031f4c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "sortCity",
+                "designer|params": [
+                    "target"
+                ],
+                "fn": "sortCity",
+                "implHandler": [
+                    "this.group('city');"
+                ],
+                "name": "check"
+            },
+            "designerId": "5228c7d0-aff1-4b7a-b02e-3eb88dd10191"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "name"
+                ],
+                "fn": "group",
+                "implHandler": [
+                    "store = Ext.getCmp('listDocs').getStore();\r",
+                    "      if(name=='hospital')\r",
+                    "      {store.setGrouper( function (item) {\r",
+                    "             return item.get('hospital')[0];\r",
+                    "                } );\r",
+                    "      }\r",
+                    "      else if(name=='specialization')\r",
+                    "      {store.setGrouper( function (item) {\r",
+                    "             return item.get('Specialization')[0];\r",
+                    "                } );\r",
+                    "      }\r",
+                    "      else if(name=='state')\r",
+                    "      {store.setGrouper( function (item) {\r",
+                    "             return item.get('State');\r",
+                    "                } );\r",
+                    "      }\r",
+                    "      else if(name=='city')\r",
+                    "      {store.setGrouper( function (item) {\r",
+                    "             return (item.get('State')+' '+item.get('City'));\r",
+                    "                } );\r",
+                    "      }"
+                ]
+            },
+            "designerId": "aadda397-c1b4-4772-a8d3-c5faf0b5de60"
+        }
+    ]
+}

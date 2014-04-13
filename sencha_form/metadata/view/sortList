@@ -1,0 +1,114 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "sort",
+        "designer|userClassName": "sortList",
+        "requires": [
+            "Ext.field.Radio",
+            "Ext.form.FieldSet"
+        ]
+    },
+    "designerId": "51125cae-220a-49ee-add5-9d7a662cb473",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();"
+                ]
+            },
+            "designerId": "77eef97b-6fa7-4eec-b4b9-c04e9025dcd7"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "sort",
+                "title": "Group By"
+            },
+            "designerId": "d1b410f0-e8ee-44a7-a8a6-3624c34c8c27",
+            "cn": [
+                {
+                    "type": "Ext.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "checked": true,
+                        "id": "sortHospital",
+                        "label": "Hospital",
+                        "labelWidth": "50%",
+                        "labelWrap": true,
+                        "name": "group"
+                    },
+                    "designerId": "f25af131-7693-4f5a-836e-12ab11136702"
+                },
+                {
+                    "type": "Ext.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "sortSpecialization",
+                        "label": "Specialization",
+                        "labelWidth": "50%",
+                        "labelWrap": true,
+                        "name": "group"
+                    },
+                    "designerId": "b40823c5-3b0f-4da1-809b-31a8e38c39a8"
+                },
+                {
+                    "type": "Ext.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "sortState",
+                        "label": "State",
+                        "labelWidth": "50%",
+                        "labelWrap": true,
+                        "name": "group"
+                    },
+                    "designerId": "86b5819e-6507-427f-b684-ff12b061b2a9"
+                },
+                {
+                    "type": "Ext.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "sortCity",
+                        "label": "City",
+                        "labelWidth": "50%",
+                        "labelWrap": true,
+                        "name": "group"
+                    },
+                    "designerId": "4701c523-9dc4-43ad-9ecf-d92c0c39d2e0"
+                }
+            ]
+        }
+    ]
+}
